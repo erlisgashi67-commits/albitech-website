@@ -4,6 +4,25 @@ Marketing website for **Albitech, Professional Refurbishment**: electronics repa
 
 The site is plain HTML, CSS and JavaScript. There is no build step and no dependencies apart from Google Fonts, so it runs on any static host.
 
+**Live site:** https://erlisgashi67-commits.github.io/albitech-website/
+
+## Screenshots
+
+![Albitech home page hero on desktop](docs/screenshots/home-desktop.png)
+
+<p>
+  <img src="docs/screenshots/home-mobile.png" alt="Albitech home page on a phone, with the mobile menu button" width="260">
+</p>
+
+<details>
+<summary>Full home page (desktop)</summary>
+
+![Full Albitech home page: hero, stats, services, Albismart, facility and call to action](docs/screenshots/home-full.png)
+
+</details>
+
+Photos and figures shown are placeholders until real content is added.
+
 ## Pages
 
 | Page | Contents |
