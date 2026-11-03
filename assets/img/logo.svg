@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 58" role="img" aria-labelledby="t">
+  <title id="t">Albitech, Professional Refurbishment</title>
+  <!-- Simplified brand mark for web use. Replace with the official logo file when available. -->
+  <defs>
+    <linearGradient id="leg" x1="0" y1="1" x2="0.6" y2="0">
+      <stop offset="0" stop-color="#2E8B3E"/>
+      <stop offset="1" stop-color="#3DBE5A"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6BD982"/>
+      <stop offset="1" stop-color="#3DBE5A"/>
+    </linearGradient>
+  </defs>
+  <path d="M2 56 L26 2 H40 L16 56 Z" fill="url(#leg)"/>
+  <path d="M44 4 L58 34 H46 L38 17 Z" fill="#5ACF73"/>
+  <path d="M28 38 H66 L60 48 H24 Z" fill="#3DBE5A"/>
+  <text x="78" y="35" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="url(#word)" textLength="198" lengthAdjust="spacingAndGlyphs">ALBITECH</text>
+  <text x="79" y="52" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#5ACF73" textLength="196" lengthAdjust="spacingAndGlyphs">PROFESSIONAL REFURBISHMENT</text>
+</svg>

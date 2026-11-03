@@ -1,0 +1,11 @@
+# Local editor and tooling settings (not part of the website)
+.claude/
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Environment and secrets
+.env
+.env.*

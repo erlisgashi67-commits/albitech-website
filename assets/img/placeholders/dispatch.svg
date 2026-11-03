@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1040" role="img" aria-label="Placeholder image: loading and dispatch">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1C3A75"/><stop offset="1" stop-color="#081833"/></linearGradient>
+    <pattern id="p" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#3DBE5A" stroke-opacity=".12" stroke-width="2"/></pattern>
+  </defs>
+  <rect width="1200" height="1040" fill="url(#g)"/>
+  <rect width="1200" height="1040" fill="url(#p)"/>
+  <g fill="none" stroke="#3DBE5A" stroke-width="8" stroke-linejoin="round" opacity=".85">
+    <rect x="490" y="300" width="220" height="170" rx="14"/>
+    <path d="M490 430l70-70 50 50 30-30 70 70"/>
+    <circle cx="655" cy="345" r="16"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="600" y="580" font-size="30" font-weight="700" letter-spacing="6" fill="#3DBE5A">PLACEHOLDER IMAGE</text>
+    <text x="600" y="650" font-size="56" font-weight="700" fill="#FFFFFF">Loading &amp; dispatch</text>
+    <text x="600" y="712" font-size="26" fill="#B9C6DC">Replace with: assets/img/facility-dispatch.jpg (1200 x 1040)</text>
+  </g>
+</svg>
