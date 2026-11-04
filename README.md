@@ -101,7 +101,6 @@ Search the project for `PLACEHOLDER` to find every one.
 
 **Other content**
 - `contact.html`: phone number and business hours (the warehouse address and map are done)
-- Footer on every page: Instagram is linked; the LinkedIn and Facebook icons still point to `#`
 - `about.html`: add the founding year, milestones and team details to the story
 - `assets/img/logo.svg` is a simplified vector logo; replace it with the official file if one exists
 
