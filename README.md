@@ -21,7 +21,7 @@ The site is plain HTML, CSS and JavaScript. There is no build step and no depend
 
 </details>
 
-Photos and figures shown are placeholders until real content is added.
+Some facility photos and the figures are still placeholders until real content is added.
 
 ## Pages
 
@@ -32,7 +32,7 @@ Photos and figures shown are placeholders until real content is added.
 | [`albismart.html`](albismart.html) | The automation platform and its six-step process: Intake, Diagnostics, Repair, QC, Provisioning, Dispatch |
 | [`facility.html`](facility.html) | Warehouse and facility, hexagon photo gallery, facility figures |
 | [`about.html`](about.html) | Company story, mission, values, sustainability |
-| [`contact.html`](contact.html) | Contact form, contact details, business hours, map |
+| [`contact.html`](contact.html) | Contact form, contact details, business hours, Google Map of the Kijevë warehouse |
 
 ## Features
 
@@ -51,7 +51,8 @@ Photos and figures shown are placeholders until real content is added.
 │   ├── css/styles.css        All styles; colours, fonts and spacing are variables at the top
 │   ├── js/main.js            Menu, scroll reveal, counters, contact form
 │   └── img/                  Logo, favicon, graphics, Open Graph image
-│       └── placeholders/     Labelled stand-ins for real photos
+│       ├── photos/           Real Albitech photos (metadata stripped)
+│       └── placeholders/     Labelled stand-ins for photos still to come
 ├── robots.txt
 └── sitemap.xml
 ```
@@ -93,17 +94,29 @@ Search the project for `PLACEHOLDER` to find every one.
 | `warehouse-racking.svg` | Home, Facility | Pallet racking with stock |
 | `forklift.svg` | Home, Facility | Forklift operator in an aisle |
 | `pallet-handling.svg` | Home, Facility | Worker moving a wrapped pallet |
-| `repair-stations.svg` | Facility | Technicians at repair and test benches |
 | `dispatch.svg` | Facility | Loading bay or outbound pallets |
 | `building.svg` | Facility, About | Building exterior with signage |
 
 **Figures.** The stats on the home and facility pages are examples. Update each `data-count` value and the matching `sr-only` sentence next to it, then delete the "Placeholder figures" note.
 
 **Other content**
-- `contact.html`: street address, phone number, business hours and map (an embed example is in the HTML comment)
+- `contact.html`: phone number and business hours (the warehouse address and map are done)
 - Footer on every page: social links currently point to `#`
 - `about.html`: add the founding year, milestones and team details to the story
 - `assets/img/logo.svg` is a simplified vector logo; replace it with the official file if one exists
+
+## Photos and location
+
+Real photos live in `assets/img/photos/`:
+
+| File | Used on | Shows |
+| --- | --- | --- |
+| `testing-wall.jpg` | Home hero, Facility gallery, About story | A technician connecting a router on the blue testing wall |
+| `production-line.jpg` | Home "Our people", About "Our team" | The team testing and packing devices on the production line |
+
+Before adding a new photo, resize it for the web (about 1000 to 1600 px on the long side) and strip its metadata, which can contain GPS coordinates and camera details. On macOS, `sips -s format jpeg -s formatOptions 80 --resampleWidth 1200 in.jpg --out out.jpg` does both. `production-line.jpg` is only 414 px wide, so a larger original would look sharper.
+
+The warehouse is **Albitech L.L.C Warehouse, Kijevë, Kosovo** ([Google Maps](https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6)). The contact page embeds the map directly; it needs no API key.
 
 ## Contact form
 

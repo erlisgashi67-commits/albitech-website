@@ -9,3 +9,6 @@
 # Environment and secrets
 .env
 .env.*
+
+# Browser test output
+.playwright-mcp/

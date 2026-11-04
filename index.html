@@ -33,6 +33,17 @@
     "url": "https://www.albi-tech.net/",
     "logo": "https://www.albi-tech.net/assets/img/logo.svg",
     "email": "office@albi-tech.net",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kijevë",
+      "addressCountry": "XK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.5676475,
+      "longitude": 20.7339796
+    },
+    "hasMap": "https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6",
     "description": "Professional electronics repair, refurbishment, quality control, logistics and device provisioning, powered by the Albismart automation platform."
   }
   </script>
@@ -62,48 +73,7 @@
   <main id="main">
     <!-- ============ Hero ============ -->
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-network" src="assets/img/network.svg" alt="" aria-hidden="true">
-      <svg class="hero-circuit" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
-        <defs>
-          <radialGradient id="hero-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0" stop-color="#3DBE5A" stop-opacity=".2"/>
-            <stop offset="1" stop-color="#3DBE5A" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <circle cx="400" cy="400" r="240" fill="url(#hero-glow)"/>
-        <circle class="ring" cx="400" cy="400" r="205"/>
-        <path class="trace" style="--d:0s" pathLength="1" d="M499.2 127.4 L485.5 165 A250 250 0 0 1 356.6 646.2 L342.6 725"/>
-        <path class="trace" style="--d:.2s" pathLength="1" d="M562.5 118.5 L547.5 144.5 A295 295 0 0 1 451.2 690.5 L465.3 769.3"/>
-        <path class="trace" style="--d:.4s" pathLength="1" d="M498.4 32.9 L488 71.6 A340 340 0 0 1 570 694.4 L610 763.7"/>
-        <path class="trace" style="--d:.6s" pathLength="1" d="M697 103 L672.2 127.8 A385 385 0 0 1 672.2 672.2 L697 697"/>
-        <path class="trace" style="--d:.8s" pathLength="1" d="M772.4 185 A430 430 0 0 1 772.4 615"/>
-        <path class="trace trace-thin" style="--d:1s" pathLength="1" d="M646.2 443.4 L690.5 451.2"/>
-        <path class="trace trace-thin" style="--d:1.1s" pathLength="1" d="M641.6 230.7 L678.5 204.8"/>
-        <path class="trace trace-thin" style="--d:1.2s" pathLength="1" d="M719.5 516.3 L761.8 531.7"/>
-        <path class="trace trace-thin" style="--d:1.3s" pathLength="1" d="M748.8 237.1 L789.6 218.2"/>
-        <path class="trace-pulse" style="--d:0s" pathLength="1" d="M499.2 127.4 L485.5 165 A250 250 0 0 1 356.6 646.2 L342.6 725"/>
-        <path class="trace-pulse" style="--d:1.4s" pathLength="1" d="M498.4 32.9 L488 71.6 A340 340 0 0 1 570 694.4 L610 763.7"/>
-        <path class="trace-pulse" style="--d:2.8s" pathLength="1" d="M697 103 L672.2 127.8 A385 385 0 0 1 672.2 672.2 L697 697"/>
-        <g>
-          <circle class="node" style="--d:0s" cx="499.2" cy="127.4" r="9"/>
-          <circle class="node" style="--d:0s" cx="342.6" cy="725" r="9"/>
-          <circle class="node" style="--d:.2s" cx="562.5" cy="118.5" r="9"/>
-          <circle class="node" style="--d:.2s" cx="465.3" cy="769.3" r="9"/>
-          <circle class="node" style="--d:.4s" cx="498.4" cy="32.9" r="9"/>
-          <circle class="node" style="--d:.4s" cx="610" cy="763.7" r="9"/>
-          <circle class="node" style="--d:.6s" cx="697" cy="103" r="9"/>
-          <circle class="node" style="--d:.6s" cx="697" cy="697" r="9"/>
-          <circle class="node" style="--d:.8s" cx="772.4" cy="185" r="8"/>
-          <circle class="node" style="--d:.8s" cx="772.4" cy="615" r="8"/>
-          <circle class="node node-hollow" style="--d:1s" cx="616.5" cy="275" r="7"/>
-          <circle class="node node-hollow" style="--d:1.1s" cx="626" cy="589.7" r="7"/>
-          <circle class="node node-hollow" style="--d:1.2s" cx="740" cy="400" r="7"/>
-          <circle class="node" style="--d:1.3s" cx="690.5" cy="451.2" r="6"/>
-          <circle class="node" style="--d:1.3s" cx="678.5" cy="204.8" r="6"/>
-        </g>
-      </svg>
-
-      <div class="container">
+      <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow" data-reveal>Professional Refurbishment</p>
           <h1 id="hero-title" data-reveal style="--delay:.1s">From Production to Promotion, <span class="accent">We Build Growth</span></h1>
@@ -116,6 +86,10 @@
           </div>
           <p class="hero-audience" data-reveal style="--delay:.4s">Built for <strong>telecom operators</strong>, <strong>retailers</strong> and <strong>enterprises</strong>.</p>
         </div>
+        <figure class="hero-photo" data-reveal="fade" style="--delay:.2s">
+          <img src="assets/img/photos/testing-wall.jpg" alt="An Albitech technician connecting a router in its slot on the blue device testing wall" width="1000" height="1499" fetchpriority="high">
+          <figcaption>Routers on the testing wall</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -236,6 +210,29 @@
       </div>
     </section>
 
+    <!-- ============ People ============ -->
+    <section class="section" aria-labelledby="people-title">
+      <div class="container split">
+        <div data-reveal="left">
+          <p class="eyebrow">Our people</p>
+          <h2 id="people-title">A skilled team you can rely on</h2>
+          <p class="lead">Behind every device is a trained, careful team. Our people test, repair, grade and pack each unit with an attention to detail that automation alone cannot give.</p>
+          <ul class="check-list" style="margin-top:24px">
+            <li>Trained technicians who follow a documented process for every device</li>
+            <li>Many of our technicians and quality inspectors are women</li>
+            <li>Steady, reliable output, shift after shift</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-outline" href="about.html">About our team</a>
+          </div>
+        </div>
+        <figure class="people-photo" data-reveal="right">
+          <img src="assets/img/photos/production-line.jpg" alt="Albitech team members testing and packing devices on the production line" width="414" height="414" loading="lazy">
+          <figcaption>On the production line</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- ============ Facility preview ============ -->
     <section class="section section--gray angle-top-rev" aria-labelledby="facility-title">
       <div class="container split">
@@ -263,7 +260,6 @@
 
     <!-- ============ CTA ============ -->
     <section class="cta-band" aria-labelledby="cta-title">
-      <img class="cta-art" src="assets/img/network.svg" alt="" aria-hidden="true">
       <div class="container">
         <div class="cta-inner" data-reveal>
           <h2 id="cta-title">Success starts when we grow together</h2>
@@ -314,6 +310,7 @@
         <ul class="footer-contact">
           <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><a href="https://www.albi-tech.net">www.albi-tech.net</a></li>
           <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg><a href="mailto:office@albi-tech.net">office@albi-tech.net</a></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><a href="https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6" target="_blank" rel="noopener">Kijevë, Kosovo</a></li>
           <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon-Fri, 08:00-17:00</span></li>
         </ul>
       </div>
