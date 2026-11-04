@@ -22,8 +22,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <script src="assets/js/main.js?v=4" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,7 +31,7 @@
     "name": "Albitech",
     "slogan": "Professional Refurbishment",
     "url": "https://www.albi-tech.net/",
-    "logo": "https://www.albi-tech.net/assets/img/logo.svg",
+    "logo": "https://www.albi-tech.net/assets/img/logo.png",
     "email": "office@albi-tech.net",
     "address": {
       "@type": "PostalAddress",
@@ -59,7 +59,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Albitech home" width="203" height="42"></a>
+      <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="AlbiTech home" width="220" height="44"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
       </button>
@@ -100,32 +100,30 @@
     </section>
 
     <!-- ============ Stats ============ -->
-    <!-- PLACEHOLDER FIGURES: replace data-count values and the matching sr-only text with confirmed numbers. -->
-    <section class="stats" aria-label="Albitech in numbers">
+    <section class="stats" aria-label="AlbiTech in numbers">
       <div class="container">
         <div class="stats-card" data-reveal>
           <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="250000">250,000</span><span class="suffix">+</span></span>
-            <span class="stat-label">Devices refurbished</span>
-            <span class="sr-only">250,000 or more devices refurbished</span>
+            <span class="stat-num" aria-hidden="true"><span data-count="5">5</span><span class="suffix">M+</span></span>
+            <span class="stat-label">CPE devices tested</span>
+            <span class="sr-only">More than 5 million CPE devices tested</span>
           </div>
           <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="48">48</span><span class="suffix unit">hrs</span></span>
-            <span class="stat-label">Average turnaround</span>
-            <span class="sr-only">48 hour average turnaround</span>
+            <span class="stat-num" aria-hidden="true"><span data-count="10">10</span></span>
+            <span class="stat-label">Countries reached</span>
+            <span class="sr-only">Devices tested for projects in 10 countries</span>
           </div>
           <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="99.2" data-decimals="1">99.2</span><span class="suffix">%</span></span>
-            <span class="stat-label">Quality pass rate</span>
-            <span class="sr-only">99.2 percent quality pass rate</span>
+            <span class="stat-num" aria-hidden="true"><span data-count="2018" data-grouping="false">2018</span></span>
+            <span class="stat-label">Founded</span>
+            <span class="sr-only">Founded in 2018</span>
           </div>
           <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="12000">12,000</span><span class="suffix unit">m²</span></span>
-            <span class="stat-label">Warehouse space</span>
-            <span class="sr-only">12,000 square metres of warehouse space</span>
+            <span class="stat-num" aria-hidden="true"><span data-count="100">100</span><span class="suffix">%</span></span>
+            <span class="stat-label">Serial-tracked devices</span>
+            <span class="sr-only">100 percent of devices tracked by serial number</span>
           </div>
         </div>
-        <p class="ph-note">Placeholder figures, to be replaced with confirmed numbers.</p>
       </div>
     </section>
 
@@ -168,13 +166,31 @@
             <p>Devices delivered configured, enrolled and labelled, ready to use from day one.</p>
             <a class="card-link" href="services.html#provisioning">Learn more <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> about provisioning</span></a>
           </article>
-          <article class="card card--cta" data-reveal style="--delay:.16s">
-            <div class="icon-badge"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h4l2-5 4 10 2-5h4"/></svg></div>
-            <h3>Need a tailored programme?</h3>
-            <p>We design service flows around your volumes, service levels and reporting requirements.</p>
-            <a class="card-link" href="contact.html">Talk to our team <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <article class="card" data-reveal style="--delay:.16s">
+            <div class="icon-badge"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M7 13.5h.01M11 13.5h6M8 9L6 5M16 9l2-4"/></svg></div>
+            <h3>Set-top box &amp; CPE refurbishment</h3>
+            <p>Routers, modems and set-top boxes tested, refurbished and packed as complete kits for operators.</p>
+            <a class="card-link" href="services.html#cpe">Learn more <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> about set-top box and CPE refurbishment</span></a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ Track record ============ -->
+    <section class="section section--gray" aria-labelledby="record-title">
+      <div class="container split">
+        <div data-reveal="left">
+          <p class="eyebrow">Track record</p>
+          <h2 id="record-title">Millions of devices tested across 10 countries</h2>
+          <p class="lead">Our CPE testing systems and processes have handled more than 5 million routers, modems and set-top boxes.</p>
+          <ul class="tags" aria-label="Countries">
+            <li class="tag">Austria</li><li class="tag">Hungary</li><li class="tag">Netherlands</li><li class="tag">Romania</li><li class="tag">Germany</li>
+            <li class="tag">France</li><li class="tag">Kosovo</li><li class="tag">USA</li><li class="tag">Canada</li><li class="tag">Turkey</li>
+          </ul>
+        </div>
+        <figure class="media-frame" data-reveal="right">
+          <img src="assets/img/photos/cpe-map.jpg" alt="World map marking the ten countries where AlbiTech CPE testing has been used" width="1600" height="1006" loading="lazy">
+        </figure>
       </div>
     </section>
 
@@ -232,9 +248,9 @@
             <a class="btn btn-outline" href="about.html">About our team</a>
           </div>
         </div>
-        <figure class="people-photo" data-reveal="right">
-          <img src="assets/img/photos/production-line.jpg" alt="Albitech team members testing and packing devices on the production line" width="414" height="414" loading="lazy">
-          <figcaption>On the production line</figcaption>
+        <figure class="people-photo people-photo--wide" data-reveal="right">
+          <img src="assets/img/photos/team-building.jpg" alt="The AlbiTech team standing in front of the AlbiTech building" width="1800" height="1200" loading="lazy">
+          <figcaption>The AlbiTech team</figcaption>
         </figure>
       </div>
     </section>
@@ -243,10 +259,9 @@
     <section class="section section--gray angle-top-rev" aria-labelledby="facility-title">
       <div class="container split">
         <div class="hex-cluster" data-reveal="left">
-          <!-- PLACEHOLDER IMAGES: replace src with real facility photos and update alt text. -->
-          <figure class="hex"><div class="hex-inner"><img src="assets/img/placeholders/forklift.svg" alt="Placeholder: forklift moving pallets between racks" width="1200" height="1040" loading="lazy"></div></figure>
-          <figure class="hex"><div class="hex-inner"><img src="assets/img/placeholders/warehouse-racking.svg" alt="Placeholder: pallet racking with boxed devices" width="1200" height="1040" loading="lazy"></div></figure>
-          <figure class="hex"><div class="hex-inner"><img src="assets/img/placeholders/pallet-handling.svg" alt="Placeholder: operator handling a wrapped pallet" width="1200" height="1040" loading="lazy"></div></figure>
+          <figure class="hex"><div class="hex-inner"><img src="assets/img/photos/racking.jpg" alt="High-bay pallet racking filled with boxed devices in the AlbiTech warehouse" width="1400" height="1050" loading="lazy"></div></figure>
+          <figure class="hex"><div class="hex-inner"><img src="assets/img/photos/pallets.jpg" alt="A wrapped pallet of devices ready for storage" width="1200" height="900" loading="lazy"></div></figure>
+          <figure class="hex"><div class="hex-inner"><img src="assets/img/photos/device-racks.jpg" alt="Rows of boxed devices connected for testing on racks" width="1400" height="1050" loading="lazy"></div></figure>
         </div>
         <div data-reveal="right">
           <p class="eyebrow">Warehouse &amp; facility</p>
@@ -282,7 +297,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="assets/img/logo.svg" alt="Albitech, Professional Refurbishment" width="213" height="44" loading="lazy">
+        <img src="assets/img/logo.png" alt="AlbiTech, Professional Refurbishment" width="250" height="50" loading="lazy">
         <p>IT and telecommunications refurbishment and electronics recycling, based in Kosovo since 2018.</p>
             <ul class="social" aria-label="Albitech on social media">
           <li><a href="https://www.linkedin.com/company/albitech-l-l-c" target="_blank" rel="noopener" aria-label="Albitech on LinkedIn"><svg class="icon icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.12 1.43-2.12 2.9V21H9z"/></svg></a></li>
@@ -308,6 +323,7 @@
           <li><a href="services.html#quality-control">Automated quality control</a></li>
           <li><a href="services.html#logistics">Inventory &amp; logistics</a></li>
           <li><a href="services.html#provisioning">Provisioning &amp; pre-configuration</a></li>
+          <li><a href="services.html#cpe">Set-top box &amp; CPE refurbishment</a></li>
         </ul>
       </nav>
       <div class="footer-col">

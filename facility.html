@@ -22,15 +22,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <script src="assets/js/main.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Albitech home" width="203" height="42"></a>
+      <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="AlbiTech home" width="220" height="44"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
       </button>
@@ -98,24 +98,23 @@
           <p class="eyebrow">Inside the facility</p>
           <h2 id="gallery-title">Built for volume, run with care</h2>
         </div>
-        <!-- PLACEHOLDER IMAGES: replace each src with a real photo (1200 x 1040 or larger, landscape) and update the alt text. -->
         <ul class="hex-gallery">
           <li data-reveal>
             <figure class="hex-figure">
-              <div class="hex"><div class="hex-inner"><img src="assets/img/placeholders/warehouse-racking.svg" alt="Placeholder: tall pallet racking loaded with boxed devices" width="1200" height="1040" loading="lazy"></div></div>
-              <figcaption><strong>Pallet racking</strong><span>High-bay storage with location-level tracking</span></figcaption>
+              <div class="hex"><div class="hex-inner"><img src="assets/img/photos/racking.jpg" alt="High-bay pallet racking filled with boxed devices" width="1400" height="1050" loading="lazy"></div></div>
+              <figcaption><strong>High-bay racking</strong><span>Organised storage with location-level tracking</span></figcaption>
             </figure>
           </li>
           <li data-reveal style="--delay:.08s">
             <figure class="hex-figure">
-              <div class="hex"><div class="hex-inner"><img src="assets/img/placeholders/forklift.svg" alt="Placeholder: forklift operator moving pallets in an aisle" width="1200" height="1040" loading="lazy"></div></div>
-              <figcaption><strong>Forklift operations</strong><span>Trained operators and safe, clear aisles</span></figcaption>
+              <div class="hex"><div class="hex-inner"><img src="assets/img/photos/pallets.jpg" alt="A wrapped pallet of devices ready for storage" width="1200" height="900" loading="lazy"></div></div>
+              <figcaption><strong>Pallet storage</strong><span>Wrapped, labelled and scanned at every move</span></figcaption>
             </figure>
           </li>
           <li data-reveal style="--delay:.16s">
             <figure class="hex-figure">
-              <div class="hex"><div class="hex-inner"><img src="assets/img/placeholders/pallet-handling.svg" alt="Placeholder: worker moving a wrapped pallet with a pallet jack" width="1200" height="1040" loading="lazy"></div></div>
-              <figcaption><strong>Pallet handling</strong><span>Wrapped, labelled and scanned at every move</span></figcaption>
+              <div class="hex"><div class="hex-inner"><img src="assets/img/photos/device-racks.jpg" alt="Rows of boxed devices connected for testing on racks" width="1400" height="1050" loading="lazy"></div></div>
+              <figcaption><strong>Device test racks</strong><span>Units tested in bulk, each in its own position</span></figcaption>
             </figure>
           </li>
           <li data-reveal>
@@ -126,50 +125,39 @@
           </li>
           <li data-reveal style="--delay:.08s">
             <figure class="hex-figure">
-              <div class="hex"><div class="hex-inner"><img src="assets/img/placeholders/dispatch.svg" alt="Placeholder: loading bay with pallets ready for dispatch" width="1200" height="1040" loading="lazy"></div></div>
-              <figcaption><strong>Loading &amp; dispatch</strong><span>Orders consolidated and shipped on schedule</span></figcaption>
+              <div class="hex"><div class="hex-inner"><img src="assets/img/photos/test-wall-rack.jpg" alt="A blue Albismart testing rack with device slots and a monitor" width="960" height="1200" loading="lazy"></div></div>
+              <figcaption><strong>Albismart test rack</strong><span>Parallel testing with slot-level status</span></figcaption>
             </figure>
           </li>
           <li data-reveal style="--delay:.16s">
             <figure class="hex-figure">
-              <div class="hex"><div class="hex-inner"><img src="assets/img/placeholders/building.svg" alt="Placeholder: exterior of the Albitech building with company signage" width="1200" height="1040" loading="lazy"></div></div>
-              <figcaption><strong>Our facility</strong><span>Storage, operations and offices on one site</span></figcaption>
+              <div class="hex"><div class="hex-inner"><img src="assets/img/photos/warehouse-exterior.jpg" alt="The exterior of the AlbiTech warehouse building and car park" width="1400" height="1050" loading="lazy"></div></div>
+              <figcaption><strong>Our warehouse</strong><span>Storage, operations and dispatch on one site</span></figcaption>
             </figure>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- PLACEHOLDER FIGURES: replace data-count values and the matching sr-only text with confirmed numbers. -->
-    <section class="section" aria-labelledby="specs-title">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <p class="eyebrow">At a glance</p>
-          <h2 id="specs-title">Facility in numbers</h2>
+    <section class="section" aria-labelledby="packaging-title">
+      <div class="container split">
+        <div data-reveal="left">
+          <p class="eyebrow">Packaging &amp; fulfilment</p>
+          <h2 id="packaging-title">Packed the way your customers expect</h2>
+          <p class="lead">We pack each device to your specification, from single retail boxes to bulk cartons, and link every unit to its box, pallet and order.</p>
+          <ul class="check-list" style="margin-top:24px">
+            <li>Individual retail boxes or bulk cartons</li>
+            <li>Custom labels, logos and printed inserts</li>
+            <li>Complete kits: device, remote, power supply, cables and batteries</li>
+            <li>Scannable serial number and MAC labels</li>
+            <li>Protective inserts that hold the device in place in transit</li>
+            <li>Barcode and QR printing for dispatch traceability</li>
+          </ul>
         </div>
-        <div class="stats-card stats-card--flat" data-reveal>
-          <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="12000">12,000</span><span class="suffix unit">m²</span></span>
-            <span class="stat-label">Warehouse area</span>
-            <span class="sr-only">12,000 square metres of warehouse area</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="5000">5,000</span><span class="suffix">+</span></span>
-            <span class="stat-label">Pallet positions</span>
-            <span class="sr-only">More than 5,000 pallet positions</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="6">6</span></span>
-            <span class="stat-label">Loading docks</span>
-            <span class="sr-only">6 loading docks</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" aria-hidden="true"><span data-count="100">100</span><span class="suffix">%</span></span>
-            <span class="stat-label">Serial-tracked moves</span>
-            <span class="sr-only">100 percent of moves tracked by serial number</span>
-          </div>
+        <div class="photo-grid" data-reveal="right">
+          <figure><img src="assets/img/photos/packaging-kit.jpg" alt="An open carton with a refurbished device kit: remote control, power supply, cables and batteries" width="1200" height="800" loading="lazy"></figure>
+          <figure><img src="assets/img/photos/packaging-box.jpg" alt="A refurbished device held in place by a protective cardboard insert" width="1200" height="800" loading="lazy"></figure>
         </div>
-        <p class="ph-note">Placeholder figures, to be replaced with confirmed numbers.</p>
       </div>
     </section>
 
@@ -190,7 +178,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="assets/img/logo.svg" alt="Albitech, Professional Refurbishment" width="213" height="44" loading="lazy">
+        <img src="assets/img/logo.png" alt="AlbiTech, Professional Refurbishment" width="250" height="50" loading="lazy">
         <p>IT and telecommunications refurbishment and electronics recycling, based in Kosovo since 2018.</p>
             <ul class="social" aria-label="Albitech on social media">
           <li><a href="https://www.linkedin.com/company/albitech-l-l-c" target="_blank" rel="noopener" aria-label="Albitech on LinkedIn"><svg class="icon icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.12 1.43-2.12 2.9V21H9z"/></svg></a></li>
@@ -216,6 +204,7 @@
           <li><a href="services.html#quality-control">Automated quality control</a></li>
           <li><a href="services.html#logistics">Inventory &amp; logistics</a></li>
           <li><a href="services.html#provisioning">Provisioning &amp; pre-configuration</a></li>
+          <li><a href="services.html#cpe">Set-top box &amp; CPE refurbishment</a></li>
         </ul>
       </nav>
       <div class="footer-col">

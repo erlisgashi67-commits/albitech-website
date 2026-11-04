@@ -43,24 +43,26 @@
   }
 
   /* ---------- Animated counters ---------- */
-  function formatNumber(value, decimals) {
+  function formatNumber(value, decimals, grouping) {
     return value.toLocaleString("en-US", {
       minimumFractionDigits: decimals,
-      maximumFractionDigits: decimals
+      maximumFractionDigits: decimals,
+      useGrouping: grouping !== false
     });
   }
   function runCounter(el) {
     var target = parseFloat(el.getAttribute("data-count"));
     var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+    var grouping = el.getAttribute("data-grouping") !== "false";
     if (isNaN(target)) return;
-    if (reduceMotion) { el.textContent = formatNumber(target, decimals); return; }
+    if (reduceMotion) { el.textContent = formatNumber(target, decimals, grouping); return; }
     var duration = 1800;
     var start = null;
     function step(now) {
       if (start === null) start = now;
       var p = Math.min((now - start) / duration, 1);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = formatNumber(target * eased, decimals);
+      el.textContent = formatNumber(target * eased, decimals, grouping);
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);

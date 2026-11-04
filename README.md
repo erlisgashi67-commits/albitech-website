@@ -21,8 +21,6 @@ The site is plain HTML, CSS and JavaScript. There is no build step and no depend
 
 </details>
 
-Some facility photos and the figures are still placeholders until real content is added.
-
 ## Pages
 
 | Page | Contents |
@@ -50,9 +48,8 @@ Some facility photos and the figures are still placeholders until real content i
 ├── assets/
 │   ├── css/styles.css        All styles; colours, fonts and spacing are variables at the top
 │   ├── js/main.js            Menu, scroll reveal, counters, contact form
-│   └── img/                  Logo, favicon, graphics, Open Graph image
-│       ├── photos/           Real Albitech photos (metadata stripped)
-│       └── placeholders/     Labelled stand-ins for photos still to come
+│   └── img/                  Official logo, favicon, Open Graph image
+│       └── photos/           Real AlbiTech photos (resized, metadata stripped)
 ├── robots.txt
 └── sitemap.xml
 ```
@@ -83,39 +80,36 @@ When the company domain is ready to point here:
 
 Do step 1 only after DNS is ready. Otherwise the `github.io` address redirects to a domain that does not serve the site yet.
 
-## Placeholders to replace before launch
+## Still to fill in
 
-Search the project for `PLACEHOLDER` to find every one.
+Search the project for `PLACEHOLDER` to find each one.
 
-**Photos** (`assets/img/placeholders/*.svg`). Each placeholder is labelled and names its suggested replacement. Use landscape photos of at least 1200 x 1040 px, with the subject centred, because the hexagon frames crop the corners. After swapping a `src`, update its `alt` text and remove the word "Placeholder".
+- `contact.html`: phone number and business hours.
+- `assets/img/logo.png` is the official logo, but the source file is only 240 px wide. A larger PNG or an SVG would look sharper on high-resolution screens.
 
-| Placeholder | Used on | Suggested photo |
-| --- | --- | --- |
-| `warehouse-racking.svg` | Home, Facility | Pallet racking with stock |
-| `forklift.svg` | Home, Facility | Forklift operator in an aisle |
-| `pallet-handling.svg` | Home, Facility | Worker moving a wrapped pallet |
-| `dispatch.svg` | Facility | Loading bay or outbound pallets |
-| `building.svg` | Facility, About | Building exterior with signage |
+## Photos, content sources and location
 
-**Figures.** The stats on the home and facility pages are examples. Update each `data-count` value and the matching `sr-only` sentence next to it, then delete the "Placeholder figures" note.
-
-**Other content**
-- `contact.html`: phone number and business hours (the warehouse address and map are done)
-- `about.html`: add the founding year, milestones and team details to the story
-- `assets/img/logo.svg` is a simplified vector logo; replace it with the official file if one exists
-
-## Photos and location
-
-Real photos live in `assets/img/photos/`:
+All photos in `assets/img/photos/` are AlbiTech's own. They are resized for the web, and their metadata (GPS, camera, creator) is removed.
 
 | File | Used on | Shows |
 | --- | --- | --- |
-| `testing-wall.jpg` | Home hero, Facility gallery, About story | A technician connecting a router on the blue testing wall |
-| `production-line.jpg` | Home "Our people", About "Our team" | The team testing and packing devices on the production line |
+| `testing-wall.jpg` | Home hero, Facility gallery | A technician connecting a router on the blue testing wall |
+| `team-building.jpg` | Home "Our people" | The whole team in front of the AlbiTech building |
+| `office-team.jpg` | About story | The team in front of an Albi Smart office building |
+| `production-line.jpg` | About "Our team" | The team testing and packing devices (only 414 px wide) |
+| `racking.jpg`, `pallets.jpg`, `device-racks.jpg` | Home, Facility | Warehouse racking, wrapped pallets, devices on test racks |
+| `test-cabinet.jpg`, `test-touchscreen.jpg`, `test-wall-rack.jpg` | Albismart, Facility | Albismart testing racks and touchscreen |
+| `packaging-kit.jpg`, `packaging-box.jpg` | Facility | Packed device kit and protective insert |
+| `warehouse-exterior.jpg` | Facility | The warehouse building |
+| `cpe-map.jpg` | Home "Track record" | Countries where AlbiTech CPE testing has been used |
 
-Before adding a new photo, resize it for the web (about 1000 to 1600 px on the long side) and strip its metadata, which can contain GPS coordinates and camera details. On macOS, `sips -s format jpeg -s formatOptions 80 --resampleWidth 1200 in.jpg --out out.jpg` does both. `production-line.jpg` is only 414 px wide, so a larger original would look sharper.
+Capabilities, test coverage, packaging options and the 5M+ / 10 countries track record come from AlbiTech's own presentation material. **Client-specific details are deliberately left out:** customer and partner names and logos, RFQ volumes, commercial terms, meeting participants, and software screenshots showing serial or MAC numbers. Keep them out when adding content.
 
-The warehouse is **Albitech L.L.C Warehouse, Kijevë, Kosovo** ([Google Maps](https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6)). The contact page embeds the map directly; it needs no API key.
+Before adding a new photo, resize it and strip its metadata. On macOS: `sips -s format jpeg -s formatOptions 80 -Z 1400 in.jpg --out out.jpg`, then `sips --deleteProperty make --deleteProperty model out.jpg`. Check that it shows no other company's brand or readable serial numbers.
+
+The warehouse is **AlbiTech L.L.C. Warehouse, Kijevë, Malishevë, Kosovo** ([Google Maps](https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6)). The contact page embeds the map directly; it needs no API key.
+
+After changing `styles.css` or `main.js`, raise the `?v=` number in the links on every page so visitors get the new file straight away.
 
 ## Contact form
 
