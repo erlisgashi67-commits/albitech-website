@@ -1,0 +1,17 @@
+# Apache settings for albi-tech.net (cPanel hosting)
+
+RewriteEngine On
+
+# Leave certificate checks alone: Let's Encrypt / AutoSSL must reach
+# /.well-known/ over plain HTTP to issue and renew the certificate.
+RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
+RewriteRule ^ - [L]
+
+# One address for every visitor: https://www.albi-tech.net
+# (matches the links in sitemap.xml, robots.txt and the pages).
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.albi-tech.net%{REQUEST_URI} [L,R=301]
+
+# Do not list folder contents.
+Options -Indexes

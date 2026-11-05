@@ -12,3 +12,6 @@
 
 # Browser test output
 .playwright-mcp/
+
+# Upload packages built for the server
+deploy/
