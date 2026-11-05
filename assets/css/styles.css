@@ -709,6 +709,18 @@ button, input, select, textarea { font: inherit; }
 .footer-bottom p { margin: 0; }
 .footer-tagline { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 0.14em; color: var(--green-500); }
 
+/* ---------- Pointer effects (mouse only, set by main.js) ---------- */
+.feature { position: relative; overflow: hidden; }
+@media (hover: hover) and (pointer: fine) {
+  .card::after, .feature::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(47, 154, 78, 0.12), transparent 70%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .card:hover::after, .feature:hover::after { opacity: 1; }
+  .js .hero-photo.reveal-done { transition: transform 0.25s ease-out; will-change: transform; }
+}
+
 /* ---------- Scroll reveal ---------- */
 .js [data-reveal] {
   opacity: 0; transform: translateY(32px);

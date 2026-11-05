@@ -102,6 +102,32 @@
     counters.forEach(function (el) { counterIo.observe(el); });
   }
 
+  /* ---------- Pointer effects (mouse only) ---------- */
+  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (finePointer && !reduceMotion) {
+    // Soft highlight that follows the cursor across cards and feature boxes.
+    document.querySelectorAll(".card, .feature").forEach(function (el) {
+      el.addEventListener("pointermove", function (e) {
+        var box = el.getBoundingClientRect();
+        el.style.setProperty("--mx", (e.clientX - box.left) + "px");
+        el.style.setProperty("--my", (e.clientY - box.top) + "px");
+      });
+    });
+
+    // Gentle 3D tilt on the home hero photo.
+    var hero = document.querySelector(".hero");
+    var heroPhoto = document.querySelector(".hero-photo");
+    if (hero && heroPhoto) {
+      hero.addEventListener("pointermove", function (e) {
+        var box = hero.getBoundingClientRect();
+        var x = (e.clientX - box.left) / box.width - 0.5;
+        var y = (e.clientY - box.top) / box.height - 0.5;
+        heroPhoto.style.transform = "perspective(1000px) rotateY(" + (x * 6).toFixed(2) + "deg) rotateX(" + (-y * 6).toFixed(2) + "deg)";
+      });
+      hero.addEventListener("pointerleave", function () { heroPhoto.style.transform = ""; });
+    }
+  }
+
   /* ---------- Footer year ---------- */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
