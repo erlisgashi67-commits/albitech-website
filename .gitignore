@@ -15,3 +15,7 @@
 
 # Upload packages built for the server
 deploy/
+
+# Source presentations (client-specific, and too large for GitHub)
+*.pptx
+*.pdf

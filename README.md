@@ -102,6 +102,9 @@ All photos in `assets/img/photos/` are AlbiTech's own. They are resized for the 
 | `packaging-kit.jpg`, `packaging-box.jpg` | Facility | Packed device kit and protective insert |
 | `warehouse-exterior.jpg` | Facility | The warehouse building |
 | `cpe-map.jpg` | Home "Track record" | Countries where AlbiTech CPE testing has been used |
+| `stb-test-bench.jpg` | Albismart "Set-top boxes", Facility | Set-top box test bench with firmware updates on screen (cropped to remove a TV broadcast and other brands' boxes) |
+| `test-cabling.jpg` | Facility | Network cables connected to routers in their test slots |
+| `server-room.jpg` | Facility | Server and network racks in the server room |
 
 Capabilities, test coverage, packaging options and the 5M+ / 10 countries track record come from AlbiTech's own presentation material. **Client-specific details are deliberately left out:** customer and partner names and logos, RFQ volumes, commercial terms, meeting participants, and software screenshots showing serial or MAC numbers. Keep them out when adding content.
 
