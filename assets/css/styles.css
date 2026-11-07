@@ -594,7 +594,7 @@ button, input, select, textarea { font: inherit; }
 .source { margin-top: 18px; font-size: 0.85rem; color: var(--ink-soft); }
 
 /* ---------- CTA band ---------- */
-.cta-band { padding-block: clamp(64px, 8vw, 104px); background: var(--green-600); color: #fff; }
+.cta-band { padding-block: clamp(28px, 3vw, 40px); background: var(--green-600); color: #fff; }
 .cta-inner { max-width: 680px; }
 .cta-band h2 { color: #fff; }
 .cta-band p { font-size: 1.15rem; color: #fff; }
