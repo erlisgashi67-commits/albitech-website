@@ -84,7 +84,7 @@ Do step 1 only after DNS is ready. Otherwise the `github.io` address redirects t
 
 Search the project for `PLACEHOLDER` to find each one.
 
-- `contact.html`: phone number and business hours.
+- `contact.html`: business hours.
 - `assets/img/logo.png` is the official logo, but the source file is only 240 px wide. A larger PNG or an SVG would look sharper on high-resolution screens.
 
 ## Photos, content sources and location
@@ -116,11 +116,11 @@ After changing `styles.css` or `main.js`, raise the `?v=` number in the links on
 
 ## Contact form
 
-Until it is connected, the form validates input and then opens the visitor's email app, addressed to office@albi-tech.net.
+Until it is connected, the form validates input and then opens the visitor's email app, addressed to info@albi-tech.net.
 
 To connect Formspree:
 
-1. Create a form in Formspree with office@albi-tech.net as the recipient.
+1. Create a form in Formspree with info@albi-tech.net as the recipient.
 2. Put its endpoint in the form's `action` attribute in `contact.html`:
 
    ```html

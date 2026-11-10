@@ -216,7 +216,7 @@
           })
           .catch(function (err) {
             var detail = err && err.message ? err.message + " " : "";
-            setStatus("error", "Sorry, your message could not be sent. " + detail + "Please try again or email office@albi-tech.net directly.");
+            setStatus("error", "Sorry, your message could not be sent. " + detail + "Please try again or email info@albi-tech.net directly.");
           })
           .then(function () { submitButton.disabled = false; });
         return;
@@ -233,8 +233,8 @@
         "",
         get("message")
       ].join("\n");
-      window.location.href = "mailto:office@albi-tech.net?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      setStatus("success", "Your email app should now open with your message ready to send. If it does not, write to office@albi-tech.net.");
+      window.location.href = "mailto:info@albi-tech.net?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      setStatus("success", "Your email app should now open with your message ready to send. If it does not, write to info@albi-tech.net.");
     });
   }
 })();
