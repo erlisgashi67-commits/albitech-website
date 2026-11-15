@@ -1,0 +1,71 @@
+{
+  "stats": [
+    {
+      "value": "10",
+      "suffix": "M",
+      "label": "CPE devices tested",
+      "isYear": false
+    },
+    {
+      "value": "64",
+      "suffix": "",
+      "label": "Countries reached",
+      "isYear": false
+    },
+    {
+      "value": "2018",
+      "suffix": "",
+      "label": "Founded",
+      "isYear": true
+    },
+    {
+      "value": "100",
+      "suffix": "%",
+      "label": "Serial-tracked devices",
+      "isYear": false
+    }
+  ],
+  "trackRecord": {
+    "heading": "Millions of devices tested across 64 countries",
+    "intro": "Our CPE testing systems and processes have handled 10 million routers, modems and set-top boxes.",
+    "countries": [
+      "Austria",
+      "Hungary",
+      "Netherlands",
+      "Romania",
+      "Germany",
+      "France",
+      "Kosovo",
+      "USA",
+      "Canada",
+      "Turkey"
+    ]
+  },
+  "contact": {
+    "company": "AlbiTech L.L.C. Warehouse",
+    "street": "Xhafer Gashi",
+    "number": "872",
+    "postalCode": "24060",
+    "town": "Kijevë",
+    "municipality": "Malishevë",
+    "country": "Kosovo",
+    "countryCode": "XK",
+    "phone": "+383 43 582 065",
+    "email": "info@albi-tech.net",
+    "mapUrl": "https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6"
+  },
+  "hours": [
+    {
+      "days": "Monday - Friday",
+      "time": "08:00 - 17:00"
+    },
+    {
+      "days": "Saturday",
+      "time": "By appointment"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ]
+}
