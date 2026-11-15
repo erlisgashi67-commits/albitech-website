@@ -52,7 +52,10 @@
     "countryCode": "XK",
     "phone": "+383 43 582 065",
     "email": "info@albi-tech.net",
-    "mapUrl": "https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6"
+    "mapUrl": "https://maps.app.goo.gl/2U7qtQhpvTjWQRKJ6",
+    "latitude": "42.5676475",
+    "longitude": "20.7339796",
+    "locationNote": "on the Pejë-Prishtinë highway"
   },
   "hours": [
     {

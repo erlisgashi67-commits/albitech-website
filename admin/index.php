@@ -289,7 +289,10 @@ $asset = function (string $file): string {
           contact_field('countryCode', 'Country code', $c, '', 'Two letters, XK for Kosovo.');
           contact_field('phone', 'Phone', $c, '', '', 'tel');
           contact_field('email', 'Email', $c, '', '', 'email');
-          contact_field('mapUrl', 'Google Maps link', $c, 'span-2', 'Copy it from Share in Google Maps.', 'url');
+          contact_field('mapUrl', 'Google Maps link', $c, 'span-2', 'Used by the "Open in Google Maps" button. Copy it from Share in Google Maps.', 'url');
+          contact_field('latitude', 'Latitude', $c, '', 'Places the map on the Contact page. In Google Maps, right-click the building and click the numbers to copy them.');
+          contact_field('longitude', 'Longitude', $c, '', 'The second of the two numbers.');
+          contact_field('locationNote', 'Location note', $c, 'span-2', 'Shown under the map, for example: on the Pejë-Prishtinë highway.');
           ?>
         </div>
         <p class="hint">Footer address: <strong data-preview="address"></strong></p>
@@ -321,9 +324,9 @@ $asset = function (string $file): string {
     <section class="panel" id="history" aria-labelledby="history-title">
       <div class="panel-head">
         <h2 id="history-title">History</h2>
-        <p>Every save keeps a copy of what was there before. Restore one to put the site back the way it was.</p>
+        <p>Every save keeps a copy of what was there before (the last <?= MAX_BACKUPS ?>). Restore one to put the site back the way it was.</p>
       </div>
-      <?php $backups = array_slice(list_backups(), 0, 10); ?>
+      <?php $backups = list_backups(); ?>
       <?php if (!$backups): ?>
         <p class="hint">No earlier versions yet. They appear here after the first save.</p>
       <?php else: ?>

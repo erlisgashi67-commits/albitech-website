@@ -180,7 +180,16 @@ function validate_content(array $in): array
         'phone' => $text($c['phone'] ?? '', 25, 'Phone', true),
         'email' => $text($c['email'] ?? '', 120, 'Email', true),
         'mapUrl' => $text($c['mapUrl'] ?? '', 300, 'Google Maps link', true),
+        'latitude' => $text($c['latitude'] ?? '', 20, 'Latitude', true),
+        'longitude' => $text($c['longitude'] ?? '', 20, 'Longitude', true),
+        'locationNote' => $text($c['locationNote'] ?? '', 120, 'Location note'),
     ];
+    if ($contact['latitude'] !== '' && (!is_numeric($contact['latitude']) || abs((float) $contact['latitude']) > 90)) {
+        $errors[] = 'The latitude must be a number between -90 and 90, such as 42.5676475.';
+    }
+    if ($contact['longitude'] !== '' && (!is_numeric($contact['longitude']) || abs((float) $contact['longitude']) > 180)) {
+        $errors[] = 'The longitude must be a number between -180 and 180, such as 20.7339796.';
+    }
     if ($contact['postalCode'] !== '' && !preg_match('/^[0-9A-Za-z -]+$/', $contact['postalCode'])) {
         $errors[] = 'The postal code can only contain letters, digits and spaces.';
     }
@@ -368,8 +377,8 @@ function render_region(string $name, array $content): ?array
             return render_hours($content['hours']);
         case 'hq':
             return [h(implode(', ', array_filter([$c['town'], $c['municipality'], $c['country']])))];
-        case 'map-address':
-            return [h(address_line($c))];
+        case 'map':
+            return render_map($c);
     }
     return null;
 }
@@ -444,8 +453,11 @@ function render_stats(array $stats): array
         if ($i >= $cols) {
             $classes[] = 'stat--next-row';
         }
+        $style = '';
         if ($i === $count - 1 && $count > $cols && $count % $cols !== 0) {
-            $classes[] = 'stat--fill'; // last row is short: stretch to the edge
+            // The last row is short: let its final figure span the empty columns.
+            $classes[] = 'stat--fill';
+            $style = ' style="--stat-span:' . ($cols - $count % $cols + 1) . '"';
         }
         $attrs = ' data-count="' . h($s['value']) . '"';
         $decimals = stat_decimals($s['value']);
@@ -456,7 +468,7 @@ function render_stats(array $stats): array
             $attrs .= ' data-grouping="false"';
         }
         $suffix = $s['suffix'] !== '' ? '<span class="suffix">' . h($s['suffix']) . '</span>' : '';
-        $lines[] = '<div class="' . implode(' ', $classes) . '">';
+        $lines[] = '<div class="' . implode(' ', $classes) . '"' . $style . '>';
         $lines[] = '  <span class="stat-num" aria-hidden="true"><span' . $attrs . '>' . h(stat_display($s)) . '</span>' . $suffix . '</span>';
         $lines[] = '  <span class="stat-label">' . h($s['label']) . '</span>';
         $lines[] = '  <span class="sr-only">' . h(stat_spoken($s)) . '</span>';
@@ -541,6 +553,23 @@ function render_contact_details(array $c): array
     ];
 }
 
+/** The embedded map, its caption and the "Open in Google Maps" button on the Contact page. */
+function render_map(array $c): array
+{
+    $coords = (float) $c['latitude'] . ',' . (float) $c['longitude'];
+    $embed = 'https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s' . $coords . '!6i16';
+    $place = implode(', ', array_filter([$c['town'], $c['municipality'], $c['locationNote']]));
+    return [
+        '<div class="map-embed" data-reveal>',
+        '  <iframe src="' . h($embed) . '" title="' . h('Map showing the Albitech warehouse in ' . implode(', ', array_filter([$c['town'], $c['country']]))) . '" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>',
+        '</div>',
+        '<div class="map-meta">',
+        '  <p><strong>' . h($c['company']) . '</strong>' . ($place !== '' ? ', ' . h($place) : '') . '</p>',
+        '  <a class="btn btn-outline btn-sm" href="' . h($c['mapUrl']) . '" target="_blank" rel="noopener">Open in Google Maps</a>',
+        '</div>',
+    ];
+}
+
 function render_hours(array $hours): array
 {
     $lines = [];
@@ -574,6 +603,7 @@ function render_jsonld(string $inner, array $content): string
     $address['addressCountry'] = $c['countryCode'];
     $data['address'] = $address;
     $data['hasMap'] = $c['mapUrl'];
+    $data['geo'] = ['@type' => 'GeoCoordinates', 'latitude' => (float) $c['latitude'], 'longitude' => (float) $c['longitude']];
 
     // Match the page's 2-space indentation.
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);

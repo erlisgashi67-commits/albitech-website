@@ -67,6 +67,7 @@ The header and footer are repeated in each page. If you change a navigation link
 - **Address and contact**: street, building number, postal code, town, phone, email and map link. Used in every footer, on the Contact page, on About and in the structured data search engines read.
 - **Business hours**: the Contact page table; the first row also appears in the footer.
 - **History**: every save keeps the previous version (the last 30), and any of them can be restored.
+- The Contact page map and its "Open in Google Maps" button follow the map link and coordinates set under Address and contact.
 
 It needs PHP 7.4 or newer, which cPanel hosting has. There is no database: the content is stored in `data/content.json`, and saving rewrites only the parts of the pages between `<!-- cms:name -->` and `<!-- /cms:name -->` markers. Everything else in the HTML is untouched, and the public site stays plain HTML.
 
