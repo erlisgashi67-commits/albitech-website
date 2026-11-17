@@ -19,3 +19,10 @@ deploy/
 # Source presentations (client-specific, and too large for GitHub)
 *.pptx
 *.pdf
+
+# Admin: password hash, login attempts and saved versions stay on the server
+data/admin-credentials.php
+data/login-attempts.json
+data/backups/
+data/.lock
+data/*.tmp-*

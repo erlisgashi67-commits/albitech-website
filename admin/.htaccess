@@ -1,0 +1,12 @@
+# Albitech admin: only index.php, admin.css and admin.js are reachable.
+Options -Indexes
+DirectoryIndex index.php
+
+<FilesMatch "^(lib|build|set-password)\.php$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow"
+  Header always set X-Frame-Options "DENY"
+</IfModule>
